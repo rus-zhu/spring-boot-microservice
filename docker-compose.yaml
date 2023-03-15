@@ -26,6 +26,18 @@ services:
       MYSQL_PASSWORD: mysql
     networks:
       - custom
+
+  keycloak:
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    image: quay.io/keycloak/keycloak:20.0
+    ports:
+      - "8181:8080"
+    networks:
+      - custom
+    command:
+      - start-dev
 networks:
   custom:
     driver: bridge
