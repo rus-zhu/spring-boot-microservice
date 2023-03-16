@@ -38,6 +38,14 @@ services:
       - custom
     command:
       - start-dev
+
+  zipkin:
+    image: openzipkin/zipkin:2
+    ports:
+      - "9411:9411"
+    networks:
+      - custom
+
 networks:
   custom:
     driver: bridge

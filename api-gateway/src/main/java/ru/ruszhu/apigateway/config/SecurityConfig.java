@@ -1,4 +1,4 @@
-package config;
+package ru.ruszhu.apigateway.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
